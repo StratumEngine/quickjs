@@ -212,7 +212,7 @@ find_package(Threads)
 if(NOT CMAKE_SYSTEM_NAME STREQUAL "WASI")
     list(APPEND qjs_libs ${CMAKE_THREAD_LIBS_INIT})
 endif()
-if(NOT MSVC)
+if(NOT WIN32)
     list(APPEND qjs_libs m)
 endif()
 
